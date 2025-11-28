@@ -4,8 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeWordle</title>
+
+    <!-- Link to your CSS file (create styles/style.css) -->
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <header>
+        <h1>PokeWordle</h1>
+        <p class="tagline">Guess the hidden Pokémon in 6 tries!</p>
+    </header>
+
+    <main>
+        <!-- Intro / description section -->
+        <section id="about">
+            <h2>About This Game</h2>
+            <p>
+                Welcome to <strong>PokeWordle</strong>! This website is my project for 
+                <strong>WDD-130</strong>. The goal of the game is to guess the secret 
+                Pokémon name within a limited number of guesses, similar to Wordle.
+            </p>
+        </section>
+
+        <!-- Game area (you can hook JavaScript to these later) -->
+        <section id="game">
+            <h2>Game Board</h2>
+
+            <!-- Word grid placeholder -->
+            <div id="board">
+                <!-- Example rows (you can add more with CSS grid) -->
+                <div class="row">
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                </div>
+                <div class="row">
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                </div>
+                <!-- Add more rows if you want 6 guesses -->
+            </div>
+
+            <!-- On-screen keyboard placeholder -->
+            <div id="keyboard">
+                <!-- You can replace this with real buttons later -->
+                <p>Keyboard goes here</p>
+            </div>
+        </section>
+
+        <!-- Instructions section -->
+        <section id="how-to-play">
+            <h2>How to Play</h2>
+            <ol>
+                <li>Type a Pokémon name and press Enter.</li>
+                <li>If a letter is in the correct spot, it will be highlighted one color.</li>
+                <li>If a letter is in the name but in the wrong spot, it will be highlighted a different color.</li>
+                <li>If a letter is not in the Pokémon’s name, it will stay gray.</li>
+                <li>Try to guess the Pokémon in 6 tries or less!</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
     <h1>Made by Zachary Purser</h1>
 </body>
 </html>
