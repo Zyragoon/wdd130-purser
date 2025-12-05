@@ -1,3 +1,14 @@
+/* header{
+    background-color: #1e79d4;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+main{
+    background-color: aqua;
+    padding: 20px;
+} */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -134,4 +145,3 @@ body > h1:last-of-type {
     margin-bottom: 1rem;
     color: #ffc857;
 }
-
