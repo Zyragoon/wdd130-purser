@@ -8,3 +8,11 @@ main{
     background-color: aqua;
     padding: 20px;
 }
+.board{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgb(231, 225, 225);
+}
