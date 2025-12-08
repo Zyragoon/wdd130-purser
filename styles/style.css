@@ -10,9 +10,16 @@ main{
 }
 .board{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     max-width: 600px;
     margin: 0 auto;
-    background-color: rgb(231, 225, 225);
+    background-color: rgb(124, 118, 118);
+    height: 200px;
+}
+.tile{
+    background-color: white;
+    border: #5f6264 2px solid;
+    height: 25px;
+    width: 25px;
 }
