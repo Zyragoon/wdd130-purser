@@ -10,12 +10,17 @@ main{
 }
 .board{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     gap: 10px;
     max-width: 600px;
     margin: 0 auto;
     background-color: rgb(124, 118, 118);
-    height: 200px;
+    height: 300px;
+}
+.rows{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
 }
 .tile{
     background-color: white;
