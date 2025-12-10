@@ -10,7 +10,7 @@ header{
 main{
     background-color: rgb(16, 221, 221);
     padding: 20px;
-    min-width: 510px;
+    height: 510px;
 }
 #board{
     display: grid;
@@ -45,10 +45,7 @@ footer{
     background-color: #0d2e50;
     color: white;
 }
-img{
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-}
+
 /* Game layout styles */
 :root{
     --accent:#0d2e50;
