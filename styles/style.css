@@ -29,3 +29,53 @@ main{
     height: 25px;
     width: 25px;
 }
+
+/* Game layout styles */
+:root{
+    --accent:#0d2e50;
+    --card:#ffffffcc;
+    --bg:#e6f7fb;
+}
+body{
+    margin:0;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    background:var(--bg);
+    color:#0b2336;
+}
+header{
+    background:var(--accent);
+    color:#fff;
+    padding:18px 12px;
+}
+.tagline{opacity:0.9;margin:6px 0 0 0}
+main{max-width:980px;margin:20px auto;padding:12px}
+#game{display:flex;gap:18px;align-items:flex-start}
+.left{flex:1}
+.right{width:320px}
+.card{background:var(--card);padding:12px;border-radius:8px;margin-bottom:12px;box-shadow:0 6px 18px rgba(10,10,10,0.06)}
+#image-wrap{display:flex;align-items:center;justify-content:center;height:320px}
+#image-wrap img{max-width:100%;max-height:100%;transition:filter .35s ease, transform .35s ease}
+.silhouette img{filter:brightness(0) saturate(100%) invert(0) contrast(1) drop-shadow(0 8px 12px rgba(0,0,0,0.4));transform:scale(0.95)}
+#controls{display:flex;gap:8px;margin-top:12px}
+#guess-input{flex:1;padding:8px;border-radius:6px;border:1px solid #ccc}
+#guess-button,#reveal-button,#next-button{padding:8px 10px;border-radius:6px;border:0;background:var(--accent);color:#fff;cursor:pointer}
+#reveal-button{background:#888}
+#next-button{background:#2a9d8f}
+.choices{display:flex;flex-wrap:wrap;gap:8px}
+.choice{padding:8px 10px;border-radius:6px;background:#f3f6f7;border:1px solid #e0e6e7;cursor:pointer}
+#score{font-size:28px;font-weight:700}
+#tries{margin-top:6px;color:#333}
+#message{font-size:14px}
+
+/* Autocomplete suggestions */
+.suggestions{position:relative}
+.suggestions .list{position:absolute;left:0;right:0;top:6px;background:#fff;border:1px solid #d3d8da;border-radius:6px;box-shadow:0 6px 18px rgba(10,10,10,0.08);max-height:220px;overflow:auto;z-index:40}
+.suggestion{padding:8px 10px;border-bottom:1px solid #f0f2f3;cursor:pointer}
+.suggestion:last-child{border-bottom:0}
+.suggestion:hover,.suggestion[aria-selected="true"]{background:#eef6f8}
+
+
+@media(max-width:800px){
+    #game{flex-direction:column}
+    .right{width:100%}
+}

@@ -3,102 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PokeWordle</title>
+    <title>Pokémon Guessing Game</title>
 
-    <!-- Link to your CSS file (create styles/style.css) -->
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <header>
-        <h1>PokeWordle</h1>
-        <p class="tagline">Guess the hidden Pokémon in 6 tries!</p>
+        <h1>Pokémon Guess</h1>
+        <p class="tagline">Guess the hidden Pokémon (Gen 1) — 6 tries</p>
     </header>
 
     <main>
-        <!-- Intro / description section -->
-        <section id="about">
-            <h2>About This Game</h2>
-            <p>
-                Welcome to <strong>PokeWordle</strong>! This website is my project for 
-                <strong>WDD-130</strong>. The goal of the game is to guess the secret 
-                Pokémon name within a limited number of guesses, similar to Wordle.
-            </p>
-        </section>
-
-        <!-- Game area (you can hook JavaScript to these later) -->
         <section id="game">
-            <h2>Game Board</h2>
-
-            <!-- Word grid placeholder -->
-            <div id="board">
-                <!-- Example rows (you can add more with CSS grid) -->
-                <div class="row">
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                    <div class="tile"></div>
+            <div class="left">
+                <div class="card">
+                    <div id="image-wrap" class="silhouette">
+                        <img id="poke-image" alt="Pokémon artwork" src="" />
+                    </div>
+                    <div id="controls">
+                        <label for="gen-select">Generation:</label>
+                        <select id="gen-select">
+                            <option value="151">Gen 1 (1-151)</option>
+                            <option value="251">Gen 1+2 (1-251)</option>
+                        </select>
+                        <label style="margin-left:8px"><input type="checkbox" id="daily-toggle"> Daily</label>
+                        <input id="guess-input" type="text" placeholder="Type Pokémon name..." autocomplete="off" aria-autocomplete="list" aria-controls="suggestions">
+                        <div id="suggestions" class="suggestions" role="listbox" aria-label="Name suggestions"></div>
+                        <button id="guess-button">Guess</button>
+                        <button id="reveal-button">Reveal</button>
+                        <button id="next-button">Next</button>
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                </div>
-                <div class="row">
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                </div>
-                <div class="row">
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                </div>
-                <div class="row">
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                </div>
-                <div class="row">
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                    <div class="tile"></div>
-                </div>
-                <!-- Add more rows if you want 6 guesses -->
             </div>
 
-            <!-- On-screen keyboard placeholder -->
-            <div id="keyboard">
-                <!-- You can replace this with real buttons later -->
-                <p>Keyboard goes here</p>
+            <div class="right">
+                <div class="card">
+                    <h3>Score</h3>
+                    <div id="score">0</div>
+                    <div id="tries">Tries left: 6</div>
+                </div>
+
+                <div class="card">
+                    <h3>Info</h3>
+                    <div id="message">Loading names...</div>
+                </div>
             </div>
         </section>
 
-        <!-- Instructions section -->
-        <section id="how-to-play">
-            <h2>How to Play</h2>
-            <ol>
-                <li>Type a Pokémon name and press Enter.</li>
-                <li>If a letter is in the correct spot, it will be highlighted one color.</li>
-                <li>If a letter is in the name but in the wrong spot, it will be highlighted a different color.</li>
-                <li>If a letter is not in the Pokémon’s name, it will stay gray.</li>
-                <li>Try to guess the Pokémon in 6 tries or less!</li>
-            </ol>
+        <section id="about">
+            <h2>About</h2>
+            <p>This is a small Pokémon guessing game </p>
         </section>
     </main>
 
     <footer>
+        <p>Made by <strong>Zachary Purser</strong></p>
     </footer>
-    <h1>Made by Zachary Purser</h1>
+
+    <script src="scripts/main.js" defer></script>
 </body>
 </html>
