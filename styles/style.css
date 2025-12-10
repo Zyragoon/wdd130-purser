@@ -44,6 +44,7 @@ a:hover{
 footer{
     background-color: #0d2e50;
     color: white;
+    height: 30px;
 }
 
 /* Game layout styles */
