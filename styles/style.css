@@ -4,6 +4,8 @@ header{
     text-align: center;
     color: white;
     font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
 }
 main{
     background-color: rgb(16, 221, 221);
@@ -29,7 +31,15 @@ main{
     height: 25px;
     width: 25px;
 }
-
+a{
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-family: Arial, sans-serif;
+}
+a:hover{
+    text-decoration: underline;
+}
 /* Game layout styles */
 :root{
     --accent:#0d2e50;
